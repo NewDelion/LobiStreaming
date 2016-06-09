@@ -14,9 +14,13 @@ namespace LobiStream
     {
         static void Main(string[] args)
         {
+            //プラグインを神が作りますw(公開バージョン)
+            //https://web.lobi.co/group/a5babead5099b687d25354a8c94ca81309b290e3
+            string group_id = "a5babead5099b687d25354a8c94ca81309b290e3";
+
             WebClient client = new WebClient();
             client.Encoding = Encoding.UTF8;
-            using (StreamReader stream = new StreamReader(client.OpenRead("https://stream.lobi.co/1/guest/group/a5babead5099b687d25354a8c94ca81309b290e3")))
+            using (StreamReader stream = new StreamReader(client.OpenRead("https://stream.lobi.co/1/guest/group/" + group_id)))
             {
                 while (true)
                 {
