@@ -1,0 +1,2 @@
+# LobiStreaming
+Lobiのグループストリームを確認するプログラム
