@@ -20,6 +20,7 @@ namespace LobiStream
 
             WebClient client = new WebClient();
             client.Encoding = Encoding.UTF8;
+            //ゲストじゃなくて、アプリをLobiに登録してアクセストークンを使ってストリームを受信しても内容は同じだった
             using (StreamReader stream = new StreamReader(client.OpenRead("https://stream.lobi.co/1/guest/group/" + group_id)))
             {
                 while (true)
